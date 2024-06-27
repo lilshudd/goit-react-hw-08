@@ -11,6 +11,8 @@ const ContactForm = () => {
     name: Yup.string().required("Name is required"),
     number: Yup.string()
       .matches(/^\d{3}-\d{2}-\d{2}$/, "Invalid phone number format (XXX-XX-XX)")
+      .min(3, "Phone number must be at least 3 characters")
+      .max(50, "Phone number must not exceed 50 characters")
       .required("Phone number is required"),
   });
 

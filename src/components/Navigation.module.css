@@ -1,0 +1,8 @@
+.navLink {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}

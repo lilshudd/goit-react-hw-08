@@ -1,0 +1,9 @@
+.authNavLink {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .authNavLink:hover {
+    text-decoration: underline;
+  }
+  

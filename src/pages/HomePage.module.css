@@ -1,0 +1,9 @@
+.homePage {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.homePage h1 {
+  font-size: 36px;
+}

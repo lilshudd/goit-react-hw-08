@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../redux/auth/operations";
+import styles from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -15,23 +16,58 @@ const RegistrationForm = () => {
       initialValues={{ name: "", email: "", password: "" }}
       onSubmit={handleSubmit}
     >
-      <Form>
-        <label>
+      <Form className={styles.registrationForm}>
+        <label className={styles.registrationFormLabel} htmlFor="name">
           Name
-          <Field name="name" type="text" />
-          <ErrorMessage name="name" component="div" />
         </label>
-        <label>
+        <Field
+          className={styles.registrationFormField}
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <ErrorMessage
+          className={styles.registrationFormError}
+          name="name"
+          component="div"
+        />
+
+        <label className={styles.registrationFormLabel} htmlFor="email">
           Email
-          <Field name="email" type="email" />
-          <ErrorMessage name="email" component="div" />
         </label>
-        <label>
+        <Field
+          className={styles.registrationFormField}
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <ErrorMessage
+          className={styles.registrationFormError}
+          name="email"
+          component="div"
+        />
+
+        <label className={styles.registrationFormLabel} htmlFor="password">
           Password
-          <Field name="password" type="password" />
-          <ErrorMessage name="password" component="div" />
         </label>
-        <button type="submit">Register</button>
+        <Field
+          className={styles.registrationFormField}
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+        <ErrorMessage
+          className={styles.registrationFormError}
+          name="password"
+          component="div"
+        />
+
+        <button className={styles.registrationFormButton} type="submit">
+          Register
+        </button>
       </Form>
     </Formik>
   );
