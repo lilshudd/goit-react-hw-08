@@ -1,13 +1,13 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
-import { login } from "../redux/auth/operations";
+import { logIn } from "../redux/auth/operations";
 import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
-    dispatch(login(values));
+    dispatch(logIn(values));
     resetForm();
   };
 
